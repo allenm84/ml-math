@@ -40,11 +40,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Combinations\Combinations.cs" />
+    <Compile Include="Combinations\GenerateOption.cs" />
+    <Compile Include="Combinations\IMetaCollection.cs" />
+    <Compile Include="Combinations\Permutations.cs" />
+    <Compile Include="Combinations\SmallPrimeUtility.cs" />
+    <Compile Include="Combinations\Variations.cs" />
+    <Compile Include="extensions\palindrome.cs" />
+    <Compile Include="ntheory.cs" />
     <Compile Include="math\abs.cs" />
     <Compile Include="math\clamp.cs" />
     <Compile Include="math\max.cs" />
     <Compile Include="math\min.cs" />
     <Compile Include="math\primes.cs" />
+    <Compile Include="math\sqrt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
