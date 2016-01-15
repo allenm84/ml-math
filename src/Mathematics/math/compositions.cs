@@ -1,52 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace System.Advanced
 {
-  public delegate long fInt64(long n);
-
-  public static class ntheory
+  public static partial class math
   {
-    static readonly fInt64[] sCollatzChainTable;
-    static ntheory()
-    {
-      sCollatzChainTable = new fInt64[2];
-      sCollatzChainTable[0] = (x => x / 2L);
-      sCollatzChainTable[1] = (x => (3L * x) + 1L);
-    }
-
-    public static IEnumerable<long> collatz(this long n)
-    {
-      var i = n;
-      int c;
-
-      while (i != 1)
-      {
-        c = (int)(i % 2);
-        yield return i;
-        i = sCollatzChainTable[c](i);
-      }
-    }
-
-    public static IEnumerable<int> divisors(int x)
-    {
-      int product = 1;
-      for (var factor = 1; product <= x; factor++, product = factor * factor)
-      {
-        if (x % factor == 0)
-        {
-          yield return factor;
-          if (product != x)
-          {
-            yield return x / factor;
-          }
-        }
-      }
-    }
-
     public static IEnumerable<int[]> compositions(int n)
     {
       /*

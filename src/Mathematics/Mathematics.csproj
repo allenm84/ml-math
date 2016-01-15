@@ -46,15 +46,76 @@
     <Compile Include="Combinations\Permutations.cs" />
     <Compile Include="Combinations\SmallPrimeUtility.cs" />
     <Compile Include="Combinations\Variations.cs" />
-    <Compile Include="extensions\palindrome.cs" />
-    <Compile Include="ntheory.cs" />
+    <Compile Include="math\clamp.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>clamp.tt</DependentUpon>
+    </Compile>
+    <Compile Include="math\factors.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>factors.tt</DependentUpon>
+    </Compile>
+    <Compile Include="math\gcd.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>gcd.tt</DependentUpon>
+    </Compile>
+    <Compile Include="math\max.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>max.tt</DependentUpon>
+    </Compile>
+    <Compile Include="math\min.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>min.tt</DependentUpon>
+    </Compile>
+    <Compile Include="math\palindrome.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>palindrome.tt</DependentUpon>
+    </Compile>
+    <Compile Include="math\sequence.cs" />
+    <Compile Include="math\compositions.cs" />
     <Compile Include="math\abs.cs" />
-    <Compile Include="math\clamp.cs" />
-    <Compile Include="math\max.cs" />
-    <Compile Include="math\min.cs" />
     <Compile Include="math\primes.cs" />
+    <Compile Include="math\combinations.cs" />
+    <Compile Include="math\shift.cs" />
+    <Compile Include="math\count.cs" />
+    <Compile Include="math\properties.cs" />
+    <Compile Include="math\functions.cs" />
     <Compile Include="math\sqrt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="math\clamp.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>clamp.cs</LastGenOutput>
+    </None>
+    <None Include="math\factors.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>factors.cs</LastGenOutput>
+    </None>
+    <None Include="math\gcd.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>gcd.cs</LastGenOutput>
+    </None>
+    <None Include="math\max.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>max.cs</LastGenOutput>
+    </None>
+    <None Include="math\min.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>min.cs</LastGenOutput>
+    </None>
+    <None Include="math\palindrome.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>palindrome.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
